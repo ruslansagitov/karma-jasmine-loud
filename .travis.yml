@@ -31,3 +31,13 @@ after_success:
   - ./node_modules/.bin/istanbul cover --report lcovonly ./node_modules/.bin/karma -- start ./test/karma.conf.js --single-run
   - cat ./coverage/lcov.info | ./node_modules/.bin/codeclimate-test-reporter
   - cat ./coverage/lcov.info | ./node_modules/.bin/coveralls
+
+deploy:
+  - provider: npm
+    email: rs@ruslansagitov.name
+    api_key:
+      secure: AUdj8mkjXQmouQJVIx/82pGX7GmHc01auLdb69uk9t5d1j523Ia4r38yOAu0suhOWB8p9XA48k2kGtBIr7FHJWPU3nLyalv8G3xHHp4S6FEzzIzJDPxFYXeppsUWDdJOD4eNwShFW+Cv6gfkGT8uLsD4Vu0wrRK6Bme7tfz6VMX3PfONlwNySpGW9+wbMSjNSJcHVvZI/V/tOREw4x4pbhryFIRkQRpbpZdSlDuL8OOZgTna/dPmA29JWcRjI0pVMzTCOikbqCFiH5tntcq4pNr1XCR8MH3XDwSAfR5fKgjx9tI0kn2YGz4LHKqO4VBjUPBZGrQf/P4A/XTG36oIPUh0WVFiVicYvI4V+UHojlStY0HCJoJ/7nHHaErCcDXAq77/Jtz48fnXjU+w3TfP+PdzLsr6K/TCSIyJqlzkdJBU4aMEhMDQapoG+tXNka/uuPj0ZYPwqSwCkvwbjjFKLIbtAVuOMlBWH80LRIigU16j2PislbKhNAu5jpMKpD5X/gsp5wkHuUQma84kVqdj4HznjqGrvMSAR1NfcXu9FpUNuXVgXrGoscu9C68m9k0pYig7AxL/tHzvfpPlwtrACCpwtpsjHJIisUSa7aWr20FKXlbnhDHjNAYTPYjRIB1XjhtOAJxTzroWQyVDwc9h35oXprW1krYWCku9VZxpDfg=
+    on:
+      all_branches: true
+      tags: true
+      repo: ruslansagitov/karma-jasmine-loud
