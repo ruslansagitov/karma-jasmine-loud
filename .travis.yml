@@ -9,6 +9,8 @@ env:
   global:
     # CODECLIMATE_REPO_TOKEN
     - secure: ihRpp1gFZulqR5oLKVFlHb50tXAinK4tlXsciQZTSX9BceaSRaFiNo8qbX6ks9vmrmuuB4Fnp+BkfXYcRJw/UDv5vyR5aG5Sil311dGgzwwZKWpWVBuSPwmIEXYQgZkhu9unWWJlySWNp1jNeSAtDDhk5wCusSKC4NdMJhZGqwzKeT17hpBpq+Mi9rUw+5c/8yGdqjUiso7vHXELY8aoqDz5fJ3Ar3yXKNeyvsINLQy/5AwgjWQgcbJdBLWDRY0eLKuqaG7bJ6kCuOMmTyOic7fFxxCG5b6c39oFlEXfeLPCwXeHbcnJucdz2fRbGUqaRj9m5kZsVrTIfmZTBc4ndJcgkyvIiqlVEOTWgL5ui9PhjvscgRDn7Po/CRrf69z5xYCwJPfsu5/MDjcQVUjAyw7jxyy1A/IDqGYya+Tq1FKysGsVxhHTNgelqom1s1KmsjsTaKgsVvZ9n9lzYSzsnCbtqf3cX0eRb6iUVYsGHcKgH9oTou2Z0vRJ1FmlLbwoMx8jhFrTo6fmDIPA4gfseP43BPLy4UUPQnoZ2qJ/A5zTQ08UbXMbohWOIS8NBuCmsZlOyoU9Rkkze/65qlIEfkEssIlvQKR1kV+bLIhcsnuHz5qUZXsCPcslsc93ThzjM9kM9rXJzxiX7cNx6gtePTOxlH+4qU+eMcGbw7hmhqY=
+    # COVERALLS_REPO_TOKEN
+    - secure: M3L9K+zqUU+JgquJPQrCAlExiMv2BijFQzJy3/De1MXhiq6ZtuycLxCkat/Jsoo2TX3Oi9JfZmXi7idstEPdsfFFW61z467fnj3nm/l8wvSLPSWBDFryCXq25Oqli/Uc9NDSWCwZFz5CRKJOqo+fQ7lnPyc7l5by+ZlDaPJ7H8dNu2lk6KcSdJFD6gADFE9kns7AQFxaPchmhV56Q9UO07pLks2ij8fLZmjxUfN4lnwkwE9np2/34GHNRC2zROy3L0e5UzNsKZhpmkMW1ZclJ4yk0/BG+1M2AB90LWFPBZHLiZCrR6WLRlC5Fa14Puwk7fCV83DpUADaFmTO7B5dy/CSZPSPKAofocQ0PNz8PI+rPIGXfKapMpD4QnOFG85h2AhTBdTzAnrDoY2wgfVOFhGkGCCIFOyPU38EvaqdBybV8mcbxlTjFWoFOIRppbS+L06aurp1B6s+r67Gg2nmyUzrcS3FSIpUuqlSqQTxvwpXDmJwgcoL94xG1m4RRZIyIof0QKWKBhv0W1zJdvKvb6+i+2IgyTJNCpxtK3ePt3s6y4IQowwnYwvazetH2CHKTprMK07c/Q1EZY9bhcfodSR5J0bvLmPaoBMMcvNW+EjT93eWJ+1h/0TeIdWS89cs3yJk38kbeuKXvM1tUqwVRYaI71GJl3ZnKImrJhvX+lY=
 
 cache:
   directories:
@@ -25,6 +27,7 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 
 after_success:
-  - npm install codeclimate-test-reporter@^0.1.1
+  - npm install codeclimate-test-reporter@^0.1.1 coveralls@^2.11.6
   - ./node_modules/.bin/istanbul cover --report lcovonly ./node_modules/.bin/karma -- start ./test/karma.conf.js --single-run
   - cat ./coverage/lcov.info | ./node_modules/.bin/codeclimate-test-reporter
+  - cat ./coverage/lcov.info | ./node_modules/.bin/coveralls
