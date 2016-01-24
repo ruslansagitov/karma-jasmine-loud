@@ -5,7 +5,7 @@
 ## Getting Started
 
 ```
-npm install karma-jasmine-loud --save-dev
+npm install karma karma-jasmine jasmine-core jasmine-loud loud karma-jasmine-loud --save-dev
 ```
 
 ```javascript
