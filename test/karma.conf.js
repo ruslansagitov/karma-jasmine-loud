@@ -22,10 +22,7 @@ module.exports = function(config) {
         plugins: plugins,
         frameworks: ['jasmine-loud', 'jasmine', 'loud'],
         browsers: browsers,
-        files: [
-            require.resolve('es5-shim'),
-            'test.js'
-        ],
+        files: ['test.js'],
         reporters: ['dots']
     });
 };
