@@ -1,7 +1,5 @@
 'use strict';
 
-var PATH = require('path');
-
 var createPattern = function(path) {
     return {
         pattern: path,

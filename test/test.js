@@ -1,3 +1,4 @@
+/* globals document */
 'use strict';
 
 describe('karma-jasmine-loud', function() {

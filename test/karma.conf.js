@@ -1,11 +1,13 @@
 'use strict';
 
+var loud = require('../index');
+
 module.exports = function(config) {
     var browsers = [],
         plugins = [
             'karma-jasmine',
             'karma-loud',
-            require('../index')
+            loud
         ];
 
     if (process.env.KARMA_BROWSERS) {
