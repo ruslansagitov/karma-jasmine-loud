@@ -1,6 +1,6 @@
 {
   "name": "karma-jasmine-loud",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Karma plugin for Jasmine matchers for Loud, web accessibility testing helper",
   "keywords": [
     "karma",
