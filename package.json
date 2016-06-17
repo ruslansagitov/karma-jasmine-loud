@@ -36,7 +36,7 @@
     "karma": "^0.13.22",
     "karma-jasmine": "^1.0.2",
     "karma-loud": "^1.0.4",
-    "loud": "^0.8.5"
+    "loud": "^0.9.0"
   },
   "engines": {
     "node": ">=4"
