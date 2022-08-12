@@ -1,17 +1,17 @@
 'use strict';
 
-let createPattern = function(path) {
+function createPattern(path) {
     return {
         pattern: path,
         included: true,
         served: true,
         watched: false
     };
-};
+}
 
-let initJasmineLoud = function(files) {
+function initJasmineLoud(files) {
     files.unshift(createPattern(require.resolve('jasmine-loud')));
-};
+}
 
 initJasmineLoud.$inject = ['config.files'];
 

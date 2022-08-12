@@ -2,17 +2,19 @@
 'use strict';
 
 describe('karma-jasmine-loud', () => {
-    beforeEach(function() {
-        this.button = document.createElement('button');
-        this.button.innerHTML = 'Join';
-        document.body.appendChild(this.button);
+    let button;
+
+    beforeEach(() => {
+        button = document.createElement('button');
+        button.innerHTML = 'Join';
+        document.body.appendChild(button);
     });
 
-    afterEach(function() {
-        document.body.removeChild(this.button);
+    afterEach(() => {
+        document.body.removeChild(button);
     });
 
-    it('works', function() {
-        expect(this.button).toBeSaid(['Join', 'button']);
+    it('works', () => {
+        expect(button).toBeSaid(['Join', 'button']);
     });
 });
