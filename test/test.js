@@ -1,7 +1,7 @@
 /* globals document */
 'use strict';
 
-describe('karma-jasmine-loud', function() {
+describe('karma-jasmine-loud', () => {
     beforeEach(function() {
         this.button = document.createElement('button');
         this.button.innerHTML = 'Join';

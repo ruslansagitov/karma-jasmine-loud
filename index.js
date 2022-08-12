@@ -1,6 +1,6 @@
 'use strict';
 
-var createPattern = function(path) {
+let createPattern = function(path) {
     return {
         pattern: path,
         included: true,
@@ -9,7 +9,7 @@ var createPattern = function(path) {
     };
 };
 
-var initJasmineLoud = function(files) {
+let initJasmineLoud = function(files) {
     files.unshift(createPattern(require.resolve('jasmine-loud')));
 };
 
