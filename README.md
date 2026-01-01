@@ -1,4 +1,4 @@
-# karma-jasmine-loud [![Build Status](https://github.com/ruslansagitov/karma-jasmine-loud/actions/workflows/test.yaml/badge.svg)](https://github.com/ruslansagitov/karma-jasmine-loud/actions/workflows/test.yaml) [![Coverage Status](https://coveralls.io/repos/ruslansagitov/karma-jasmine-loud/badge.svg)](https://coveralls.io/r/ruslansagitov/karma-jasmine-loud) [![Code Climate](https://codeclimate.com/github/ruslansagitov/karma-jasmine-loud/badges/gpa.svg)](https://codeclimate.com/github/ruslansagitov/karma-jasmine-loud)
+# karma-jasmine-loud [![Build Status](https://github.com/ruslansagitov/karma-jasmine-loud/actions/workflows/test.yaml/badge.svg)](https://github.com/ruslansagitov/karma-jasmine-loud/actions/workflows/test.yaml) [![Coverage Status](https://coveralls.io/repos/ruslansagitov/karma-jasmine-loud/badge.svg)](https://coveralls.io/r/ruslansagitov/karma-jasmine-loud)
 
 [Karma][] plugin for [Jasmine][] matchers for [Loud][], web accessibility testing helper
 

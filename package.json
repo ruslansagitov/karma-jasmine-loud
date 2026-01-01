@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "eslint": "^8.57.1",
-    "jasmine-core": "^5.5.0",
+    "jasmine-core": "^5.13.0",
     "jasmine-loud": "^1.0.3",
     "karma": "^6.4.4",
     "karma-chrome-launcher": "^3.2.0",
